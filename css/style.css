@@ -19,6 +19,9 @@ li{
     margin: 0;
     padding: 0;
 }
+.bold{
+    font-weight: 600;
+}
 
 /* immagine hotel */
 .immagine-hotel{
@@ -35,14 +38,118 @@ li{
     background-color: white;
     text-align: center;
 }
-
+/* titolo */
+h2{
+    margin-top: 10px;
+}
+/* recensioni */
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #09a96c;
+    display: inline-block;
+    vertical-align: middle;
+}
+.quantità-recensioni{
+    display: inline-block;
+    line-height: 10px;
+    vertical-align: middle;
+}
+.recensioni p{
+    margin-bottom: 0;
+}
 /* prezzi */
+.prezzi{
+    margin: 15px 0;
+}
 .ms_flex{
     display: flex;
     justify-content: space-between;
 }
+.full-price{
+    color: red;
+    text-decoration: line-through;
+}
+.discount{
+    font-size: 25px;
+}
+.prezzo a{
+    color: rgba(0, 0, 0, 0.7);
+}
 /* bottone offerta */
 .ms-btn{
     border-radius: 10px;
-    text-align: right;
+}
+/* plus offerta */
+.plus-offerta{
+    margin-top: 10px;
+}
+/* lista siti */
+.lista-siti{
+    display: none;
+}
+.sito{
+    color: rgba(0, 0, 0, 0.7);
+}
+.lista-siti .full-price{
+    text-decoration: none;
+}
+/* confronto prezzi */
+.confronto{
+    color: rgba(0, 0, 0, 0.7);
+}
+.lista-siti li{
+    margin-bottom: 10px;
+}
+.lista-siti .bold::before{
+    width: 90%;
+    height: 2px;
+    background-color: lightgray;
+    display: block;
+}
+
+@media screen and (min-width: 992px){
+    .ms_card{
+        display: flex;
+    }
+    .immagine-hotel{
+        width: 30%;
+    }
+    .immagine-hotel img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /* card content */
+    .card-content{
+        display: flex;
+    }
+    .ms_flex{
+        display: block;
+        text-align: center;
+    }
+    /* prezzi */
+    .prezzi{
+        order: 1;
+        width: 35%;
+        border-right: 1px dotted grey;
+        margin: 0;
+    }
+    /* lista siti */
+    .lista-siti{
+        display: block;
+        text-align: center;
+        order: 2;
+        width: 20%;
+        border-right: 1px dotted grey;
+    }
+    .recensioni{
+        order: 3;
+        width: 45%;
+        margin-left: 20px;
+    }
+    .confronto{
+        display: none;
+    }
 }
