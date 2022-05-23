@@ -22,6 +22,9 @@ li{
 .bold{
     font-weight: 600;
 }
+.red{
+    color: red;
+}
 
 /* immagine hotel */
 .immagine-hotel{
@@ -43,6 +46,9 @@ h2{
     margin-top: 10px;
 }
 /* recensioni */
+.circles{
+    margin-bottom: 5px;
+}
 .circle{
     width: 20px;
     height: 20px;
@@ -59,6 +65,12 @@ h2{
 .recensioni p{
     margin-bottom: 0;
 }
+.caratteristiche{
+    margin-top: 10px;
+}
+.nascosto{
+    display: none;
+}
 /* prezzi */
 .prezzi{
     margin: 15px 0;
@@ -68,7 +80,6 @@ h2{
     justify-content: space-between;
 }
 .full-price{
-    color: red;
     text-decoration: line-through;
 }
 .discount{
@@ -84,6 +95,9 @@ h2{
 /* plus offerta */
 .plus-offerta{
     margin-top: 10px;
+}
+.plus-offerta .bold{
+    font-size: 19px;
 }
 /* lista siti */
 .lista-siti{
@@ -102,11 +116,14 @@ h2{
 .lista-siti li{
     margin-bottom: 10px;
 }
-.lista-siti .bold::before{
+.linea::before{
+    content: '';
     width: 90%;
     height: 2px;
-    background-color: lightgray;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.1);
     display: block;
+    margin-bottom: 5px;
 }
 
 @media screen and (min-width: 992px){
@@ -129,12 +146,16 @@ h2{
         display: block;
         text-align: center;
     }
+    .nascosto{
+        display: block;
+    }
     /* prezzi */
     .prezzi{
         order: 1;
         width: 35%;
         border-right: 1px dotted grey;
         margin: 0;
+        padding-top: 10px;
     }
     /* lista siti */
     .lista-siti{
@@ -143,6 +164,9 @@ h2{
         order: 2;
         width: 20%;
         border-right: 1px dotted grey;
+    }
+    .full-price{
+        font-size: 25px;
     }
     .recensioni{
         order: 3;
